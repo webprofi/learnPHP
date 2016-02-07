@@ -28,4 +28,25 @@
 	
 	
 	// commit to github
+
+
+	
+	/* 4. Create a simple HTML form and accept the user name and display the name through PHP echo statement. Go to the editor
+		Sample output of the HTML form :
+		sample html form
+	*/
+?>	
+	<form name="send_name" method="post">
+		<h2>Please input your name:</h2>  
+		<input type="text" name="user_name" placeholder="Input your name here">
+		<input type="submit" name="Submit Name">
+	</form>
+	
+<?
+	$name = $_POST['user_name'];  
+	if ($name !="") {
+		echo ("Hello ".$name."!");
+	} else { 
+		echo "Please input your name";
+	}
 ?>

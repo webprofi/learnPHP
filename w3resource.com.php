@@ -1,4 +1,8 @@
 <?
+	//=============================================
+	//PHP Basic - Exercises, Practice, Solution
+	//=============================================
+
 	//Get PHP version and configuration information
 	//phpinfo();
 	
@@ -49,4 +53,63 @@
 	} else { 
 		echo "Please input your name";
 	}
+?>
+
+
+<?
+	echo "<br><br>
+		<br>=============================================
+		<br> 5. Write a PHP script to get the client IP address. 
+		<br>============================================= 
+		<br>";
+	
+	echo $_SERVER['REMOTE_ADDR'];
+
+
+	echo "<br><br>Solution from w3resource.com<br>";
+	echo "http://www.w3resource.com/php-exercises/php-basic-exercise-5.php";
+
+	//whether ip is from share internet  
+	if (!empty($_SERVER['HTTP_CLIENT_IP']))     
+	  {  
+	    $ip_address = $_SERVER['HTTP_CLIENT_IP'];  
+	  }  
+	//whether ip is from proxy  
+	elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))    
+	  {  
+	    $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];  
+	  }  
+	//whether ip is from remote address  
+	else  
+	  {  
+	    $ip_address = $_SERVER['REMOTE_ADDR'];  
+	  }  
+	echo "<br>".$ip_address."<br>";  
+?>  
+
+
+<?
+	echo "<br><br>
+		<br>=============================================
+		<br> 6. Write a simple PHP browser detection script. 
+		<br>============================================= 
+		<br>";
+	echo $_SERVER['HTTP_USER_AGENT'];
+
+?>
+
+
+<?
+	echo "<br><br>
+		<br>=============================================
+		<br> 7. Write a PHP script to get the current file name. 
+		<br>============================================= 
+		<br>";
+	echo __FILE__;
+
+
+	echo "<br><br>Solution from w3resource.com<br>";
+	echo "http://www.w3resource.com/php-exercises/php-basic-exercise-7.php";
+	$current_file_name = basename($_SERVER['PHP_SELF']);  
+	echo $current_file_name;  
 ?>
